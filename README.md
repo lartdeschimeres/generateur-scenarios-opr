@@ -6,9 +6,7 @@ Outil HTML autonome (un seul fichier, aucune dépendance serveur) : missions pri
 
 ## Démo
 
-👉 https://lartdeschimeres.github.io/NOM-DU-DEPOT/
-
-*(à adapter une fois le dépôt publié — remplacer `NOM-DU-DEPOT` par le vrai nom)*
+👉 https://lartdeschimeres.github.io/generateur-scenarios-opr/
 
 ## Fonctionnalités
 
