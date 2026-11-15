@@ -1,18 +1,20 @@
 # Générateur de scénarios OPR
 
-Générateur aléatoire de scénarios pour les jeux [One Page Rules](https://www.onepagerules.com/) — **Age of Fantasy** et **Grimdark Future** — basé sur les règles avancées v3.5.1.
+Générateur aléatoire de scénarios pour les jeux [One Page Rules](https://www.onepagerules.com/) — **Age of Fantasy** et **Grimdark Future** — basé sur les règles avancées (Advanced Rulebook) v3.6.0.
 
 Outil HTML autonome (un seul fichier, aucune dépendance serveur) : missions principales, types de déploiement illustrés, missions secondaires, et export de fiche de scénario en PDF ou en image.
 
 ## Démo
 
-👉 https://lartdeschimeres.github.io/generateur-scenarios-opr/
+👉 https://lartdeschimeres.github.io/NOM-DU-DEPOT/
+
+*(à adapter une fois le dépôt publié — remplacer `NOM-DU-DEPOT` par le vrai nom)*
 
 ## Fonctionnalités
 
 - Tirage aléatoire d'une mission (Face à face / Score progressif / Attaque et Défense) pour Age of Fantasy ou Grimdark Future
-- Tirage d'un type de déploiement (Standard / Avancé / Asymétrique), illustré par un diagramme de la zone de table
-- Tirage optionnel d'une mission secondaire (6 catégories × 6 missions)
+- Tirage d'un type de déploiement (Standard / Stratégique / Asymétrique), illustré par un diagramme de la zone de table
+- Missions secondaires (6 catégories × 6 missions) selon les trois styles du livret : Partagées, Cachées (révélées à la demande, joueur par joueur) ou Partagées + cachées, avec tirage du style au 1D3 en option
 - Thème visuel qui s'adapte à l'univers tiré (typographie « futuriste » pour Grimdark Future)
 - Export de la fiche de scénario en PDF (impression navigateur, format A4) ou en image JPEG
 - Fonctionne hors-ligne une fois la page chargée (l'export JPEG nécessite une connexion pour charger la librairie html2canvas au premier chargement)
@@ -23,7 +25,7 @@ Ouvrir `index.html` dans un navigateur — aucune installation requise. Pour hé
 
 ## Origine du contenu
 
-Les textes des missions et les diagrammes/images de déploiement sont issus d'une traduction française personnelle des livrets *Age of Fantasy — Règles avancées* et *Grimdark Future — Règles avancées* (v3.5.1), publiés par OPR Games.
+Les textes des missions et les diagrammes de déploiement sont issus des livrets *Age of Fantasy — Advanced Rulebook* et *Grimdark Future — Advanced Rulebook* (v3.6.0, anglais), publiés par OPR Games, traduits en français par l'auteur de l'outil (les diagrammes de déploiement sont des captures du livret).
 
 ## ⚠️ À propos des droits
 
