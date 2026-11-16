@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Générateur de scénarios — OPR</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Vollkorn:wght@500;700&family=Orbitron:wght@500;700;900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Vollkorn:wght@500;700&family=Orbitron:wght@500;700;900&family=Exo+2:wght@400;600;700&display=swap');
 
   :root{
     --parchment:#f2f2f0;
@@ -378,6 +378,27 @@
   #fiche-a5.futuriste .sec-nom{
     font-family:'Orbitron', sans-serif; font-style:normal; font-weight:700;
     text-transform:uppercase; letter-spacing:1px; font-size:0.95rem;
+  }
+
+
+  /* ---- Thème Grimdark Future appliqué à toute la page (univers GF choisi ou tiré) ---- */
+  body.theme-gf{ font-family:'Exo 2', 'Segoe UI', sans-serif; }
+  body.theme-gf h1,
+  body.theme-gf legend,
+  body.theme-gf button#tirer,
+  body.theme-gf .rappel summary{
+    font-family:'Orbitron', sans-serif;
+    font-style:normal;
+  }
+  body.theme-gf h1{ font-weight:900; text-transform:uppercase; letter-spacing:2px; font-size:1.6rem; }
+  body.theme-gf legend{ font-weight:700; text-transform:uppercase; letter-spacing:1px; font-size:0.9rem; }
+  body.theme-gf button#tirer{ font-weight:700; text-transform:uppercase; letter-spacing:2px; font-size:1.05rem; }
+  body.theme-gf .rappel summary{ font-size:0.9rem; letter-spacing:0.5px; }
+  body.theme-gf .boutons-export button,
+  body.theme-gf .btn-relancer,
+  body.theme-gf .btn-reveler{ font-family:'Exo 2', 'Segoe UI', sans-serif; }
+  @media (max-width:480px){
+    body.theme-gf h1{ font-size:1.15rem; letter-spacing:1px; }
   }
 
   footer{
@@ -957,6 +978,15 @@ function majAideSecondaire(){
   aide.textContent = txt;
 }
 
+function appliquerTheme(universKey){
+  if(document.body) document.body.classList.toggle('theme-gf', universKey === 'gf');
+}
+
+function majThemeSelection(){
+  const sel = document.querySelector('input[name="univers"]:checked');
+  appliquerTheme(sel ? sel.value : 'aleatoire');
+}
+
 function tirerScenario(){
   // Mission
   const universKey = tirerUnivers();
@@ -995,6 +1025,7 @@ function tirerScenario(){
 
   const resultat = document.getElementById('resultat');
   resultat.classList.toggle('futuriste', universKey === "gf");
+  appliquerTheme(universKey);
   resultat.classList.remove('visible');
   void resultat.offsetWidth;
   resultat.classList.add('visible');
@@ -1002,6 +1033,8 @@ function tirerScenario(){
 
 document.getElementById('tirer').addEventListener('click', tirerScenario);
 
+document.getElementById('options-univers').addEventListener('change', majThemeSelection);
+majThemeSelection();
 document.getElementById('options-secondaire').addEventListener('change', majAideSecondaire);
 document.getElementById('zone-secondaire').addEventListener('click', function(ev){
   const b = ev.target.closest ? ev.target.closest('button') : null;
