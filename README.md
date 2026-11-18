@@ -6,7 +6,9 @@ Outil HTML autonome (un seul fichier, aucune dépendance serveur) : missions pri
 
 ## Démo
 
-https://lartdeschimeres.github.io/generateur-scenarios-opr/
+👉 https://lartdeschimeres.github.io/NOM-DU-DEPOT/
+
+*(à adapter une fois le dépôt publié — remplacer `NOM-DU-DEPOT` par le vrai nom)*
 
 ## Fonctionnalités
 
@@ -14,7 +16,7 @@ https://lartdeschimeres.github.io/generateur-scenarios-opr/
 - Tirage d'un type de déploiement (Standard / Stratégique / Asymétrique), illustré par un diagramme de la zone de table
 - Missions secondaires (6 catégories × 6 missions) selon les trois styles du livret : Partagées, Cachées (révélées à la demande, joueur par joueur) ou Partagées + cachées, avec tirage du style au 1D3 en option
 - Thème visuel qui s'adapte à l'univers tiré (typographie « futuriste » pour Grimdark Future)
-- Export de la fiche de scénario en PDF (impression navigateur, format A4) ou en image JPEG
+- Export de la fiche de scénario en noir et blanc, format A4 : PDF (impression navigateur) ou image JPEG ; plan de déploiement toujours au ratio 3:2 (plateau de 180 × 120 cm) et mise en page ajustée automatiquement pour tenir sur une seule page
 - Fonctionne hors-ligne une fois la page chargée (l'export JPEG nécessite une connexion pour charger la librairie html2canvas au premier chargement)
 
 ## Utilisation
